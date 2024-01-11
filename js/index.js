@@ -4,7 +4,7 @@ const searchBtn = document.querySelector('#searchBtn');
 
 const getData = async (cityName, emojiFlag) => {
   const currentData = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=4e9f6ea98d1f4520bf515500240701&q=${cityName}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=4e9f6ea98d1f4520bf515500240701&q=${cityName}&days=3`
   );
   const data = await currentData.json();
   showToday(data.current, data.location, emojiFlag);
